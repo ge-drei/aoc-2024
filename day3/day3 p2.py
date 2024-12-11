@@ -2,7 +2,7 @@ import re
 
 mul_instruction = re.compile(r"mul\((\d+),(\d+)\)|do\(\)|don't\(\)")
 
-with open("adventofcode2024/day3", "r") as file:
+with open("adventofcode2024/day3/day3", "r") as file:
     matches = [match for match in mul_instruction.finditer(file.read())]
 
 sum = 0

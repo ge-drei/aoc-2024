@@ -19,7 +19,7 @@ def is_record_safe(Record: list, can_remove: bool = True):
 
 
 reports = []
-with open("adventofcode2024/day2", "r") as file:
+with open("adventofcode2024/day2/day2", "r") as file:
     for line in file:
         reports.append(list([int(level) for level in line.split()]))
 

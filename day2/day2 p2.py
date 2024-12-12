@@ -1,3 +1,5 @@
+import os.path as path
+
 def is_record_safe(Record: list, can_remove: bool = True):
     record = Record.copy()
     decreasing = True if (record[0] > record[1]) else False
@@ -19,7 +21,7 @@ def is_record_safe(Record: list, can_remove: bool = True):
 
 
 reports = []
-with open("adventofcode2024/day2/day2", "r") as file:
+with open(path.dirname(__file__) + "/input", "r") as file:
     for line in file:
         reports.append(list([int(level) for level in line.split()]))
 

@@ -1,9 +1,10 @@
 import re
+import os.path as path
 
 mul_instruction = re.compile(r"mul\((\d+),(\d+)\)")
 
 strings = []
-with open("adventofcode2024/day3/day3", "r") as file:
+with open(path.dirname(__file__) + "/input", "r") as file:
     strings = file.readlines()
 
 sum = 0

@@ -1,3 +1,5 @@
+import os.path as path
+
 def increasing_safely(l: list):
     all_increasing = all(l[i] < l[i+1] for i in range(len(l) - 1))
     all_steps_valid = all(1 <= abs(l[i+1] - l[i]) <= 3 for i in range(len(l) - 1))
@@ -11,7 +13,7 @@ def decreasing_safely(l: list):
 
 
 reports = []
-with open("adventofcode2024/day2/day2", "r") as file:
+with open(path.dirname(__file__) + "/input", "r") as file:
     for line in file:
         reports.append(list([int(level) for level in line.split()]))
 

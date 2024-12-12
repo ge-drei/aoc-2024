@@ -1,8 +1,9 @@
 import re
+import os.path as path
 
 mul_instruction = re.compile(r"mul\((\d+),(\d+)\)|do\(\)|don't\(\)")
 
-with open("adventofcode2024/day3/day3", "r") as file:
+with open(path.dirname(__file__) + "/input", "r") as file:
     matches = [match for match in mul_instruction.finditer(file.read())]
 
 sum = 0

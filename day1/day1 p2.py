@@ -1,6 +1,8 @@
+import os.path as path
+
 list1 = []
 list2 = []
-with open("adventofcode2024/day1/day1", "r") as file:
+with open(path.dirname(__file__) + "/input", "r") as file:
     for line in file:
         num1, num2 = line.split()
         list1.append(int(num1))
